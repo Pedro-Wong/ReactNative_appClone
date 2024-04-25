@@ -18,7 +18,7 @@ export function LoginScreen({ navigation }) {
           <Text style={style.style6}>LOGIN</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate("StarScreen")}>
+        <TouchableOpacity onPress={() => navigation.popToTop()}>
           <Text style={style.style6}>Back to start</Text>
         </TouchableOpacity>
       </View>

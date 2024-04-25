@@ -8,7 +8,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export function SingIn() {
+
+export function SingIn({ navigation }) {
   return (
     <View style={style.style1}>
       <View style={style.style2}>
@@ -20,11 +21,14 @@ export function SingIn() {
       <View style={style.style4}>
         <View>
           <TouchableOpacity style={style.style5}>
-            <Text style={style.style6}>Sign in</Text>
+            <Text style={style.style6}>Cadastrar</Text>
           </TouchableOpacity>
         </View>
         <View>
-          <TouchableOpacity style={style.style5}>
+          <TouchableOpacity
+            style={style.style5}
+            onPress={() => navigation.navigate("LoginScreen")}
+          >
             <Text style={style.style6}>Login</Text>
           </TouchableOpacity>
         </View>

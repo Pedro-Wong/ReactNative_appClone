@@ -1,12 +1,14 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { StartScreen } from "../screen/startScreen";
+import { StartScreen } from "../screen/stackScreens/startScreen";
 import { NavigationStack } from "./stackNavigation";
+import { BottomTab } from "./bottomNavigation";
 
 export function Routes() {
+  const auth = false;
   return (
     <NavigationContainer>
-      <NavigationStack />
+      {auth ? <NavigationStack /> : <BottomTab />}
     </NavigationContainer>
   );
 }

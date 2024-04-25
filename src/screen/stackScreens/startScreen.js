@@ -9,7 +9,7 @@ export function StartScreen({ navigation }) {
       </View>
 
       <View style={style.style3}>
-        <TouchableOpacity style={style.style5}>
+        <TouchableOpacity style={style.style5} onPress={() => navigation.navigate('LoginScreen') }>
           <Text style={style.style6}>Login in you account</Text>
         </TouchableOpacity>
       </View>
