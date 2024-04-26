@@ -7,6 +7,9 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Fontisto } from "@expo/vector-icons";
 
 export function HomeBottom() {
   return (
@@ -24,8 +27,8 @@ export function HomeBottom() {
       <View style={style.style4}>
         {/* <Text>Funcionalidades</Text> */}
         <TouchableOpacity style={style.style5}>
-          <View style={{}}>
-            <Text>Imagem</Text>
+          <View>
+            <FontAwesome name="user" size={40} color="black" />
           </View>
           <View>
             <Text>Perfil</Text>
@@ -34,7 +37,11 @@ export function HomeBottom() {
         </TouchableOpacity>
         <TouchableOpacity style={style.style5}>
           <View>
-            <Text>Imagem</Text>
+            <MaterialCommunityIcons
+              name="weight-kilogram"
+              size={40}
+              color="black"
+            />
           </View>
           <View>
             <Text>Treino</Text>
@@ -43,7 +50,11 @@ export function HomeBottom() {
         </TouchableOpacity>
         <TouchableOpacity style={style.style5}>
           <View>
-            <Text>Imagem</Text>
+            <MaterialCommunityIcons
+              name="account-details"
+              size={40}
+              color="black"
+            />
           </View>
           <View>
             <Text>Matriculas</Text>
@@ -52,7 +63,7 @@ export function HomeBottom() {
         </TouchableOpacity>
         <TouchableOpacity style={style.style5}>
           <View>
-            <Text>Imagem</Text>
+            <FontAwesome name="credit-card" size={40} color="black" />
           </View>
           <View>
             <Text>Pagamentos</Text>
@@ -61,7 +72,7 @@ export function HomeBottom() {
         </TouchableOpacity>
         <TouchableOpacity style={style.style5}>
           <View>
-            <Text>Imagem</Text>
+            <MaterialCommunityIcons name="ladder" size={40} color="black" />
           </View>
           <View>
             <Text>Avaliações</Text>
@@ -70,7 +81,7 @@ export function HomeBottom() {
         </TouchableOpacity>
         <TouchableOpacity style={style.style5}>
           <View>
-            <Text>Imagem</Text>
+            <Fontisto name="date" size={40} color="black" />
           </View>
           <View>
             <Text>Frequência</Text>
@@ -101,13 +112,12 @@ const style = StyleSheet.create({
     columnGap: 30,
   },
   style5: {
-    borderWidth: 2,
     borderRadius: 12,
     width: "40%",
     height: "30%",
     marginBottom: 10,
     marginTop: 5,
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     paddingLeft: 15,
     paddingBottom: 10,
     backgroundColor: "#fff",
