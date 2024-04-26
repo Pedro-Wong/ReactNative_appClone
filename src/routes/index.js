@@ -8,7 +8,7 @@ export function Routes() {
   const auth = true;
   return (
     <NavigationContainer>
-      {auth ? <NavigationStack/> : <BottomTab />}
+      {auth ? <NavigationStack /> : <BottomTab />}
     </NavigationContainer>
   );
 }

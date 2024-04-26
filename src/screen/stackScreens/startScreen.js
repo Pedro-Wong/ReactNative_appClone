@@ -8,6 +8,7 @@ import {
   Image,
 } from "react-native";
 
+
 export function StartScreen({ navigation }) {
   return (
     <View style={style.style1}>
@@ -24,7 +25,7 @@ export function StartScreen({ navigation }) {
         
         <View style={style.style3}>
           <Text style={{alignSelf: "center", fontSize: 18, fontWeight: "bold"}}>Digite seu Email:</Text>
-          <TextInput style={style.style5}>
+          <TextInput placeholder="Email" style={style.style5}>
             
           </TextInput>
 
@@ -63,8 +64,8 @@ const style = StyleSheet.create({
   },
   style4: {
    
-    width: "60%",
-    height: "27%",
+    width: "65%",
+    height: "35%",
   },
   style5: {
     width: "100%",
@@ -72,6 +73,7 @@ const style = StyleSheet.create({
     borderWidth: 0.6,
     height: "20%",
     borderRadius: 10,
+    padding: 8
   },
   style6: {
     alignSelf: "center",

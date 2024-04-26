@@ -39,9 +39,9 @@ export function BottomTab() {
           return <MaterialIcons name="payments" size={24} color="black" />
         }
       }}/>
-      <Screen name="Configurações" component={SettingsBottom} options={{
+      <Screen name="sobre" component={SettingsBottom} options={{
         tabBarIcon: () => {
-          return <Ionicons name="settings" size={24} color="black" />
+          return <FontAwesome name="question" size={24} color="black" />
         }
       }}/>
     </Navigator>

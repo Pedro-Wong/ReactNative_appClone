@@ -7,12 +7,17 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import { FontAwesome } from '@expo/vector-icons';
+
 
 export function PayamentsBottom() {
   return (
     <View style={style.style1}>
       <View style={style.style10}>
-        <View style={style.style9}></View>
+        <View style={style.style9}>
+          <FontAwesome name="user-circle" size={100} color="black" />
+        </View>
+        <Text style={{fontSize:25, color: "white"}}>Nome do Usuário</Text>
       </View>
       <View style={style.style2}>
         <View style={style.style4}>
@@ -93,12 +98,17 @@ const style = StyleSheet.create({
     borderWidth: 2,
     width: "25%",
     height: "50%",
-    borderRadius: 100,
+    
     alignSelf: "center",
+    backgroundColor: "#f1f1f1",
+    justifyContent:"center",
+    alignItems:"center"
   },
   style10:{
     borderWidth: 2,
     flex: 0.3,
-    justifyContent: "center"
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 20
   }
 });

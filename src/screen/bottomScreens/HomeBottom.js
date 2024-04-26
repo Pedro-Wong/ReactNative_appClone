@@ -15,15 +15,10 @@ export function HomeBottom() {
   return (
     <View style={style.style1}>
       <View style={style.style2}>
-        <View
-          style={{
-            borderWidth: 2,
-            width: "30%",
-            height: "50%",
-            borderRadius: 100,
-          }}
-        ></View>
+        <FontAwesome name="user-circle" size={100} color="black" />
+        <Text style={{color:"white", fontSize: 20}}>Nome do Usuário</Text>
       </View>
+     
       <View style={style.style4}>
         {/* <Text>Funcionalidades</Text> */}
         <TouchableOpacity style={style.style5}>
@@ -98,13 +93,14 @@ const style = StyleSheet.create({
     flex: 1,
   },
   style2: {
-    flex: 0.2,
+    flex: 0.25,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#0066cb",
+    gap: 5
   },
   style4: {
-    flex: 0.8,
+    flex: 0.75,
     backgroundColor: "#f1f1f1",
     flexWrap: "wrap",
     alignContent: "center",
