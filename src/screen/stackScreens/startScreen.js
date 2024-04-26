@@ -1,26 +1,40 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  TextInput,
+  Image,
+} from "react-native";
 
 export function StartScreen({ navigation }) {
   return (
     <View style={style.style1}>
+
+      <View style={{ width:"100%"}}>
+        <Text style={{alignSelf: "center", fontSize: 35, fontWeight: "bold", color: "#f1f1f1" }}>SCA</Text>
+      </View>
+      
       <View style={style.style2}>
-        <Text></Text>
-      </View>
+        <Text style={style.style8}>Seja muito bem vindo ao SCA Aluno!</Text>
+        <View style={style.style4}>
+          <Image style={{width: "100%", height: "100%"}} source={require('../../../assets/loginImage.jpeg')}/>
+        </View>
+        
+        <View style={style.style3}>
+          <Text style={{alignSelf: "center", fontSize: 18, fontWeight: "bold"}}>Digite seu Email:</Text>
+          <TextInput style={style.style5}>
+            
+          </TextInput>
 
-      <View style={style.style3}>
-        <TouchableOpacity style={style.style5} onPress={() => navigation.navigate('LoginScreen') }>
-          <Text style={style.style6}>Login in you account</Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={style.style4}>
-        <TouchableOpacity
-          style={style.style5}
-          onPress={() => navigation.navigate("SingIn")}
-        >
-          <Text style={style.style6}>Sign up</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={style.style7}
+            onPress={() => navigation.navigate("LoginScreen")}
+          >
+            <Text style={style.style6}>CONTINUAR</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -29,34 +43,51 @@ export function StartScreen({ navigation }) {
 const style = StyleSheet.create({
   style1: {
     flex: 1,
-    backgroundColor: "blue",
+    backgroundColor: "#0066cb",
     width: "100%",
+    justifyContent: "flex-end",
   },
   style2: {
-    flex: 0.6,
-    backgroundColor: "red",
+    flex: 0.9,
+    backgroundColor: "#f1f1f1",
     justifyContent: "center",
     alignItems: "center",
+    rowGap: 8,
   },
   style3: {
-    backgroundColor: "green",
-    flex: 0.2,
+    
+    width: "90%",
+    backgroundColor: "#f1f1f1",
     justifyContent: "center",
+    rowGap: 10,
   },
   style4: {
-    backgroundColor: "orange",
-    flex: 0.2,
-    justifyContent: "flex-start",
+   
+    width: "60%",
+    height: "27%",
   },
   style5: {
-    width: "90%",
-    backgroundColor: "blue",
-    alignSelf: "center",
-    justifyContent: "center",
-    height: "42%",
-    borderRadius: 100,
+    width: "100%",
+    backgroundColor: "white",
+    borderWidth: 0.6,
+    height: "20%",
+    borderRadius: 10,
   },
   style6: {
     alignSelf: "center",
+    color: "white"
   },
+  style7:{
+    width: "100%",
+    backgroundColor: "white",
+    alignSelf: "center",
+    justifyContent: "center",
+    height: "20%",
+    borderRadius: 10,
+    backgroundColor: "#0066cb",
+    
+  },
+  style8:{
+    fontSize: 20,
+  }
 });

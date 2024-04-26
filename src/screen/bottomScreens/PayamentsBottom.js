@@ -39,7 +39,7 @@ export function PayamentsBottom() {
 const style = StyleSheet.create({
   style1: {
     flex: 1,
-    borderWidth: 2,
+    
     justifyContent: "flex-end",
     backgroundColor: "#0066cb",
   },
@@ -54,7 +54,7 @@ const style = StyleSheet.create({
     width: "80%",
   },
   style4: {
-    borderWidth: 2,
+    
     height: "35%",
     width: "90%",
     marginTop: 25,
@@ -73,7 +73,7 @@ const style = StyleSheet.create({
     backgroundColor: "#0066cb",
   },
   style6: {
-    borderWidth: 2,
+    
     height: "50%",
     width: "100%",
     borderRadius: 5,

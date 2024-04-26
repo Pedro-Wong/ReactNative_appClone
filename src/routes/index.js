@@ -5,7 +5,7 @@ import { NavigationStack } from "./stackNavigation";
 import { BottomTab } from "./bottomNavigation";
 
 export function Routes() {
-  const auth = false;
+  const auth = true;
   return (
     <NavigationContainer>
       {auth ? <NavigationStack/> : <BottomTab />}

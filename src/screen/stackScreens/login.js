@@ -1,33 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import {
-  Text,
-  Button,
   View,
-  TextInput,
-  StyleSheet,
+  Text,
   TouchableOpacity,
+  StyleSheet,
+  TextInput,
+  Image,
 } from "react-native";
+import { FontAwesome } from '@expo/vector-icons';
+
 
 export function LoginScreen({ navigation }) {
   return (
     <View style={style.style1}>
-      <View style={style.style2}>
-        <TextInput style={style.style7} placeholder="Username" />
-        <TextInput style={style.style7} placeholder="password" />
-        <TouchableOpacity style={style.style5}>
-          <Text style={style.style6}>LOGIN</Text>
-        </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.popToTop()}>
-          <Text style={style.style6}>Back to start</Text>
-        </TouchableOpacity>
+      <View style={{ width:"100%"}}>
+        <Text style={{alignSelf: "center", fontSize: 35, fontWeight: "bold", color: "#f1f1f1" }}>SCA</Text>
       </View>
+      
+      <View style={style.style2}>
+        <Text style={style.style8}>Academia Exemplo</Text>
+        <View style={style.style4}>
+          <FontAwesome name="user" size={130} color="black" style={{alignSelf:"center"}} />
+          <Text style={{alignSelf: "center"}}>Nome do Usuário</Text>
+        </View>
+        
+        <View style={style.style3}>
+          <Text style={{alignSelf: "center", fontSize: 18, fontWeight: "bold"}}>Digite sua senha</Text>
+          <TextInput style={style.style5} placeholder="Senha">
+            
+          </TextInput>
 
-      {/* <View style={style.style3}>
-        <TouchableOpacity style={style.style5}>
-          <Text style={style.style6}>LOGIN SCREEN</Text>
-        </TouchableOpacity>
-      </View> */}
+          <TouchableOpacity
+            style={style.style7}
+            
+          >
+            <Text style={style.style6}>ENTRAR</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={{alignSelf: "center"}} onPress={()=>{navigation.navigate('StartScreen')}}>
+            <Text style={{fontSize:20}}>Voltar</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 }
@@ -35,34 +50,53 @@ export function LoginScreen({ navigation }) {
 const style = StyleSheet.create({
   style1: {
     flex: 1,
-    backgroundColor: "blue",
+    backgroundColor: "#0066cb",
     width: "100%",
+    justifyContent: "flex-end",
   },
   style2: {
-    flex: 1,
-    backgroundColor: "purple",
+    flex: 0.9,
+    backgroundColor: "#f1f1f1",
     justifyContent: "center",
     alignItems: "center",
-    rowGap: 20,
+    rowGap: 8,
   },
-  style3: {},
-  style4: {},
-  style5: {
-    width: "40%",
-    backgroundColor: "blue",
-    alignSelf: "center",
+  style3: {
+    
+    width: "90%",
+    backgroundColor: "#f1f1f1",
     justifyContent: "center",
-    height: "8%",
-    borderRadius: 100,
+    rowGap: 10,
+  },
+  style4: {
+    borderRadius: 4,
+    width: "60%",
+    height: "27%",
+    backgroundColor: "white",
+  },
+  style5: {
+    width: "100%",
+    backgroundColor: "white",
+    borderWidth: 0.6,
+    height: "20%",
+    borderRadius: 10,
+    padding: 8
   },
   style6: {
     alignSelf: "center",
-    fontSize: 18,
+    color: "white"
   },
-  style7: {
-    width: "90%",
-    borderRadius: 100,
-    height: "7%",
+  style7:{
+    width: "100%",
     backgroundColor: "white",
+    alignSelf: "center",
+    justifyContent: "center",
+    height: "20%",
+    borderRadius: 10,
+    backgroundColor: "#0066cb",
+    
   },
+  style8:{
+    fontSize: 20,
+  }
 });
