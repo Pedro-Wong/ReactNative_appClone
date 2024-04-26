@@ -90,11 +90,11 @@ const style = StyleSheet.create({
     flex: 0.2,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "blue",
+    backgroundColor: "#0066cb",
   },
   style4: {
     flex: 0.8,
-    backgroundColor: "green",
+    backgroundColor: "#f1f1f1",
     flexWrap: "wrap",
     alignContent: "center",
     justifyContent: "space-between",
@@ -110,6 +110,7 @@ const style = StyleSheet.create({
     justifyContent: "space-between",
     paddingLeft: 15,
     paddingBottom: 10,
+    backgroundColor: "#fff",
   },
   style6: {},
 });

@@ -19,7 +19,7 @@ export function BottomTab() {
   return (
     <Navigator
       initialRouteName="HomeBottom"
-      screenOptions={{ headerShown: false }}
+       screenOptions={{ headerShown: false }}
     >
       <Screen name="Ínicio" component={HomeBottom} options={{
         tabBarIcon: () => {
