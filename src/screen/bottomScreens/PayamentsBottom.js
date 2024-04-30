@@ -14,9 +14,9 @@ export function PayamentsBottom() {
   return (
     <View style={style.style1}>
       <View style={style.style10}>
-        <View style={style.style9}>
+         
           <FontAwesome name="user-circle" size={100} color="black" />
-        </View>
+        
         <Text style={{fontSize:25, color: "white"}}>Nome do Usuário</Text>
       </View>
       <View style={style.style2}>
@@ -95,17 +95,10 @@ const style = StyleSheet.create({
     fontSize: 16,
   },
   style9: {
-    borderWidth: 2,
-    width: "25%",
-    height: "50%",
     
-    alignSelf: "center",
-    backgroundColor: "#f1f1f1",
-    justifyContent:"center",
-    alignItems:"center"
   },
   style10:{
-    borderWidth: 2,
+   
     flex: 0.3,
     justifyContent: "center",
     alignItems: "center",

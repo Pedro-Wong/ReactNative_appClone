@@ -29,7 +29,7 @@ export function StartScreen({ navigation }) {
   return (
     <View style={style.style1}>
 
-      <View style={{ width:"100%"}}>
+      <View style={{ width:"100%", backgroundColor:"#0066cb", flex: 0.15, justifyContent:"center"}}>
         <Text style={{alignSelf: "center", fontSize: 35, fontWeight: "bold", color: "#f1f1f1" }}>SCA</Text>
       </View>
       
@@ -62,10 +62,10 @@ const style = StyleSheet.create({
     flex: 1,
     backgroundColor: "#0066cb",
     width: "100%",
-    justifyContent: "flex-end",
+    justifyContent: "center",
   },
   style2: {
-    flex: 0.9,
+    flex: 0.85,
     backgroundColor: "#f1f1f1",
     justifyContent: "center",
     alignItems: "center",

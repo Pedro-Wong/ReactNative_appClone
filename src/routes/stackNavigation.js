@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { StartScreen } from "../screen/stackScreens/startScreen";
-import { SingIn } from "../screen/stackScreens/singIn";
+
 import { LoginScreen } from "../screen/stackScreens/login";
 import { BottomTab } from "./bottomNavigation";
 

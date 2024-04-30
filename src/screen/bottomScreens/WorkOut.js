@@ -18,7 +18,9 @@ export function WorkOut() {
           <MaterialIcons name="fitness-center" size={120} color="black" />
         </View>
         <View style={style.style5}>
+         
           <View style={style.style8}>
+           
             <Text style={style.style7}>Treino 1</Text>
           </View>
           <View style={style.style9}>
