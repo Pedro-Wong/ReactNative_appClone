@@ -8,47 +8,61 @@ import {
   Image,
 } from "react-native";
 
-
-
-
-
-
 export function StartScreen({ navigation }) {
   const [email, setEmail] = useState();
- 
 
-
-  const verificacao = function(){
-    if(email === "Usuario"){
-      navigation.navigate("LoginScreen")
-    }else{
-      navigation.navigate("StartScreen")
+  const verificacao = function () {
+    if (email === "Usuario") {
+      navigation.navigate("LoginScreen");
+    } else {
+      navigation.navigate("StartScreen");
     }
-  }
+  };
 
   return (
     <View style={style.style1}>
-
-      <View style={{ width:"100%", backgroundColor:"#0066cb", flex: 0.15, justifyContent:"center"}}>
-        <Text style={{alignSelf: "center", fontSize: 35, fontWeight: "bold", color: "#f1f1f1" }}>SCA</Text>
+      <View
+        style={{
+          width: "100%",
+          backgroundColor: "#0066cb",
+          flex: 0.15,
+          justifyContent: "center",
+        }}
+      >
+        <Text
+          style={{
+            alignSelf: "center",
+            fontSize: 35,
+            fontWeight: "bold",
+            color: "#f1f1f1",
+          }}
+        >
+          SCA
+        </Text>
       </View>
-      
+
       <View style={style.style2}>
         <Text style={style.style8}>Seja muito bem vindo ao SCA Aluno!</Text>
         <View style={style.style4}>
-          <Image style={{width: "100%", height: "100%"}} source={require('../../../assets/loginImage.jpeg')}/>
+          <Image
+            style={{ width: "100%", height: "100%" }}
+            source={require("../../../assets/loginImage.jpeg")}
+          />
         </View>
-        
-        <View style={style.style3}>
-          <Text style={{alignSelf: "center", fontSize: 18, fontWeight: "bold"}}>Digite seu Email:</Text>
-          <TextInput placeholder="Email" style={style.style5} onChangeText={(text) => setEmail(text) }>
-            
-          </TextInput>
 
-          <TouchableOpacity
-            style={style.style7}
-            onPress={() => verificacao()}
+        <View style={style.style3}>
+          <Text
+            style={{ alignSelf: "center", fontSize: 18, fontWeight: "bold" }}
           >
+            Digite seu Email:
+          </Text>
+          <TextInput
+            placeholder="Email: Usuario"
+            style={style.style5}
+            onChangeText={(text) => setEmail(text)}
+          ></TextInput>
+
+          <TouchableOpacity style={style.style7} onPress={() => verificacao()}>
             <Text style={style.style6}>CONTINUAR</Text>
           </TouchableOpacity>
         </View>
@@ -72,14 +86,12 @@ const style = StyleSheet.create({
     rowGap: 8,
   },
   style3: {
-    
     width: "90%",
     backgroundColor: "#f1f1f1",
     justifyContent: "center",
     rowGap: 10,
   },
   style4: {
-   
     width: "65%",
     height: "35%",
   },
@@ -89,13 +101,13 @@ const style = StyleSheet.create({
     borderWidth: 0.6,
     height: "20%",
     borderRadius: 10,
-    padding: 8
+    padding: 8,
   },
   style6: {
     alignSelf: "center",
-    color: "white"
+    color: "white",
   },
-  style7:{
+  style7: {
     width: "100%",
     backgroundColor: "white",
     alignSelf: "center",
@@ -103,9 +115,8 @@ const style = StyleSheet.create({
     height: "20%",
     borderRadius: 10,
     backgroundColor: "#0066cb",
-    
   },
-  style8:{
+  style8: {
     fontSize: 20,
-  }
+  },
 });

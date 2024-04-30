@@ -9,26 +9,21 @@ import {
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
-
-
-
 export function LoginScreen({ navigation }) {
   const [senha, setSenha] = useState();
-  
-
-  let verificacaoSenha = function () {
-    useEffect(() => {
-      if (senha === "123") {
-        navigation.navigate("SwitchToTab")
-      } else {
-        navigation.navigate("LoginScreen");
-      }
-    });
-  };
+  console.log(senha)
+ 
+  const verificacaoSenha = function () {
+    if(senha === "123") {
+       navigation.navigate("SwitchToTab");
+    } else {
+       navigation.navigate("LoginScreen");
+     }
+    };
 
   return (
     <View style={style.style1}>
-      <View style={{ width: "100%" }}>
+      <View style={{ width: "100%", flex:0.15, justifyContent:"center" }}>
         <Text
           style={{
             alignSelf: "center",
@@ -61,11 +56,11 @@ export function LoginScreen({ navigation }) {
           </Text>
           <TextInput
             style={style.style5}
-            placeholder="Senha"
-            onChangeText={(senha) => setSenha(senha)}
+            placeholder="Senha: 123"
+            onChangeText={(senha)=>setSenha(senha)}
           ></TextInput>
 
-          <TouchableOpacity style={style.style7} onPress={verificacaoSenha()}>
+          <TouchableOpacity style={style.style7} onPress={()=>verificacaoSenha()} >
             <Text style={style.style6}>ENTRAR</Text>
           </TouchableOpacity>
 
@@ -88,10 +83,10 @@ const style = StyleSheet.create({
     flex: 1,
     backgroundColor: "#0066cb",
     width: "100%",
-    justifyContent: "flex-end",
+    justifyContent: "center",
   },
   style2: {
-    flex: 0.9,
+    flex: 0.85,
     backgroundColor: "#f1f1f1",
     justifyContent: "center",
     alignItems: "center",
