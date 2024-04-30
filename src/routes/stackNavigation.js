@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { StartScreen } from "../screen/stackScreens/startScreen";
 import { SingIn } from "../screen/stackScreens/singIn";
 import { LoginScreen } from "../screen/stackScreens/login";
+import { BottomTab } from "./bottomNavigation";
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -13,7 +14,7 @@ export const NavigationStack = () => {
       screenOptions={{ headerShown: false }}
     >
       <Screen name="StartScreen" component={StartScreen}></Screen>
-      <Screen name="SingIn" component={SingIn} />
+      <Screen name="SwitchToTab" component={BottomTab} />
       <Screen name="LoginScreen" component={LoginScreen} />
     </Navigator>
   );

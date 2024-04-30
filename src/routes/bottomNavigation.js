@@ -39,7 +39,7 @@ export function BottomTab() {
           return <MaterialIcons name="payments" size={24} color="black" />
         }
       }}/>
-      <Screen name="sobre" component={SettingsBottom} options={{
+      <Screen name="Sobre" component={SettingsBottom} options={{
         tabBarIcon: () => {
           return <FontAwesome name="question" size={24} color="black" />
         }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -7,39 +7,75 @@ import {
   TextInput,
   Image,
 } from "react-native";
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome } from "@expo/vector-icons";
+
+
 
 
 export function LoginScreen({ navigation }) {
+  const [senha, setSenha] = useState();
+  
+
+  let verificacaoSenha = function () {
+    useEffect(() => {
+      if (senha === "123") {
+        navigation.navigate("SwitchToTab")
+      } else {
+        navigation.navigate("LoginScreen");
+      }
+    });
+  };
+
   return (
     <View style={style.style1}>
-
-      <View style={{ width:"100%"}}>
-        <Text style={{alignSelf: "center", fontSize: 35, fontWeight: "bold", color: "#f1f1f1" }}>SCA</Text>
+      <View style={{ width: "100%" }}>
+        <Text
+          style={{
+            alignSelf: "center",
+            fontSize: 35,
+            fontWeight: "bold",
+            color: "#f1f1f1",
+          }}
+        >
+          SCA
+        </Text>
       </View>
-      
+
       <View style={style.style2}>
         <Text style={style.style8}>Academia Exemplo</Text>
         <View style={style.style4}>
-          <FontAwesome name="user" size={130} color="black" style={{alignSelf:"center"}} />
-          <Text style={{alignSelf: "center"}}>Nome do Usuário</Text>
+          <FontAwesome
+            name="user"
+            size={130}
+            color="black"
+            style={{ alignSelf: "center" }}
+          />
+          <Text style={{ alignSelf: "center" }}>Nome do Usuário</Text>
         </View>
-        
-        <View style={style.style3}>
-          <Text style={{alignSelf: "center", fontSize: 18, fontWeight: "bold"}}>Digite sua senha</Text>
-          <TextInput style={style.style5} placeholder="Senha">
-            
-          </TextInput>
 
-          <TouchableOpacity
-            style={style.style7}
-            
+        <View style={style.style3}>
+          <Text
+            style={{ alignSelf: "center", fontSize: 18, fontWeight: "bold" }}
           >
+            Digite sua senha
+          </Text>
+          <TextInput
+            style={style.style5}
+            placeholder="Senha"
+            onChangeText={(senha) => setSenha(senha)}
+          ></TextInput>
+
+          <TouchableOpacity style={style.style7} onPress={verificacaoSenha()}>
             <Text style={style.style6}>ENTRAR</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{alignSelf: "center"}} onPress={()=>{navigation.navigate('StartScreen')}}>
-            <Text style={{fontSize:20}}>Voltar</Text>
+          <TouchableOpacity
+            style={{ alignSelf: "center" }}
+            onPress={() => {
+              navigation.navigate("StartScreen");
+            }}
+          >
+            <Text style={{ fontSize: 20 }}>Voltar</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -62,7 +98,6 @@ const style = StyleSheet.create({
     rowGap: 8,
   },
   style3: {
-    
     width: "90%",
     backgroundColor: "#f1f1f1",
     justifyContent: "center",
@@ -80,13 +115,13 @@ const style = StyleSheet.create({
     borderWidth: 0.6,
     height: "20%",
     borderRadius: 10,
-    padding: 8
+    padding: 8,
   },
   style6: {
     alignSelf: "center",
-    color: "white"
+    color: "white",
   },
-  style7:{
+  style7: {
     width: "100%",
     backgroundColor: "white",
     alignSelf: "center",
@@ -94,9 +129,8 @@ const style = StyleSheet.create({
     height: "20%",
     borderRadius: 10,
     backgroundColor: "#0066cb",
-    
   },
-  style8:{
+  style8: {
     fontSize: 20,
-  }
+  },
 });

@@ -9,7 +9,23 @@ import {
 } from "react-native";
 
 
+
+
+
+
 export function StartScreen({ navigation }) {
+  const [email, setEmail] = useState();
+ 
+
+
+  const verificacao = function(){
+    if(email === "Usuario"){
+      navigation.navigate("LoginScreen")
+    }else{
+      navigation.navigate("StartScreen")
+    }
+  }
+
   return (
     <View style={style.style1}>
 
@@ -25,13 +41,13 @@ export function StartScreen({ navigation }) {
         
         <View style={style.style3}>
           <Text style={{alignSelf: "center", fontSize: 18, fontWeight: "bold"}}>Digite seu Email:</Text>
-          <TextInput placeholder="Email" style={style.style5}>
+          <TextInput placeholder="Email" style={style.style5} onChangeText={(text) => setEmail(text) }>
             
           </TextInput>
 
           <TouchableOpacity
             style={style.style7}
-            onPress={() => navigation.navigate("LoginScreen")}
+            onPress={() => verificacao()}
           >
             <Text style={style.style6}>CONTINUAR</Text>
           </TouchableOpacity>

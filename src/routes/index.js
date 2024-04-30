@@ -4,11 +4,22 @@ import { StartScreen } from "../screen/stackScreens/startScreen";
 import { NavigationStack } from "./stackNavigation";
 import { BottomTab } from "./bottomNavigation";
 
+
+
 export function Routes() {
-  const auth = true;
+  
+  
+
+
+
+
+
+
+
   return (
     <NavigationContainer>
-      {auth ? <NavigationStack /> : <BottomTab />}
+      {/* {true ? <NavigationStack /> : <BottomTab />} */}
+      <NavigationStack/>
     </NavigationContainer>
   );
 }
